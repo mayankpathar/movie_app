@@ -8,7 +8,7 @@ function Footer() {
 					<div class="col-4 col-md-6 col-sm-12">
 						<div class="content">
 							<a href="#" class="logo">
-								<i class='bx bx-movie-play bx-tada main-color'></i>Fl<span class="main-color">i</span>x
+								<i class='bx bx-movie-play bx-tada main-color'></i>Phoe<span class="main-color">nix</span>Zone
 							</a>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veniam ex quos hic id nobis beatae earum sapiente! Quod ipsa exercitationem officiis non error illum minima iusto et. Dolores, quibusdam?

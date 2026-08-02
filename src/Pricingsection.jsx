@@ -6,7 +6,7 @@ function Pricingsection() {
         <div class="container">
             <div class="pricing">
                 <div class="pricing-header">
-                    Fl<span class="main-color">i</span>x pricing
+                    Phoe<span class="main-color">nix</span>Zone pricing
                 </div>
                 <div class="pricing-list">
                     <div class="row">
@@ -41,7 +41,7 @@ function Pricingsection() {
                                         Premium
                                     </div>
                                     <div class="pricing-price">
-                                        $15.99 <span>/month</span>
+                                        ₹99 <span>/month</span>
                                     </div>
                                 </div>
                                 <div class="pricing-box-content">
@@ -65,7 +65,7 @@ function Pricingsection() {
                                         VIP
                                     </div>
                                     <div class="pricing-price">
-                                        $35.99 <span>/month</span>
+                                        ₹199 <span>/month</span>
                                     </div>
                                 </div>
                                 <div class="pricing-box-content">

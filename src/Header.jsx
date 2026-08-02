@@ -8,7 +8,7 @@ function Header() {
         <div class="container">
             <div class="nav">
                 <a href="#" class="logo">
-                    <i class='bx bx-movie-play bx-tada main-color'></i>Fl<span class="main-color">i</span>x
+                    <i class='bx bx-movie-play bx-tada main-color'></i>Phoe<span class="main-color">nix</span>Zone
                 </a>
                 <ul class="nav-menu" id="nav-menu">
                     <li><a href="#">Home</a></li>
