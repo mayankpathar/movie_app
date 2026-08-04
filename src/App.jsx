@@ -10,6 +10,7 @@ import Latestanime from './Latestanime'
 import Specialmovie from './Specialmovie'
 import Pricingsection from './Pricingsection'
 import Footer from './Footer'
+import Singp from './Singp'
 
 function App() {
   return(<>
@@ -21,6 +22,7 @@ function App() {
  <Specialmovie/>
  <Pricingsection/>
  <Footer/>
+ 
 
   </>);
 }
