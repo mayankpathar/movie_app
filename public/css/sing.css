@@ -1,0 +1,193 @@
+:root{
+    --bg-top:    #241a3d;
+    --bg-bottom: #140e26;
+    --card:      #1d1533;
+    --card-brd:  rgba(255,255,255,0.07);
+    --field:     #241b3f;
+    --field-brd: rgba(255,255,255,0.09);
+    --purple:    #7b3fe4;
+    --purple-2:  #a56bff;
+    --text-dim:  #9992b3;
+    --white:     #f3f1fa;
+  }
+
+  *{ box-sizing:border-box; }
+
+  body{
+    min-height:100vh;
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    color:var(--white);
+    background:radial-gradient(circle at 50% 0%, var(--bg-top), var(--bg-bottom) 70%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:2rem 1rem;
+  }
+
+  .login-card{
+    width:100%;
+    max-width:380px;
+    background:var(--card);
+    border:1px solid var(--card-brd);
+    border-radius:22px;
+    padding:2.2rem 1.8rem 2rem;
+    box-shadow:0 20px 60px rgba(0,0,0,0.45);
+  }
+
+  .logo-wrap{
+    width:64px; height:64px;
+    margin:0 auto 0.9rem;
+    border-radius:50%;
+    background:linear-gradient(145deg, var(--purple-2), var(--purple) 60%, #4b1fa3);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 22px rgba(123,63,228,0.45);
+  }
+  .logo-wrap img{
+    width:30px; height:auto;
+    filter:brightness(0) invert(1);
+  }
+
+  .brand-name{
+    text-align:center;
+    font-weight:700;
+    font-size:1.05rem;
+    letter-spacing:0.06em;
+    margin-bottom:1.6rem;
+  }
+
+  h1.welcome{
+    text-align:center;
+    font-size:1.5rem;
+    font-weight:600;
+    margin-bottom:0.25rem;
+  }
+  p.subtitle{
+    text-align:center;
+    color:var(--text-dim);
+    font-size:0.86rem;
+    margin-bottom:1.8rem;
+  }
+
+  .input-group-custom{
+    display:flex;
+    align-items:center;
+    background:var(--field);
+    border:1px solid var(--field-brd);
+    border-radius:12px;
+    padding:0.15rem 0.9rem;
+    margin-bottom:1rem;
+    transition:border-color .2s ease;
+  }
+  .input-group-custom:focus-within{
+    border-color:var(--purple-2);
+  }
+  .input-group-custom i{
+    color:var(--text-dim);
+    font-size:0.95rem;
+    width:20px;
+    text-align:center;
+  }
+  .input-group-custom input{
+    flex:1;
+    background:transparent;
+    border:none;
+    outline:none;
+    color:var(--white);
+    padding:0.75rem 0.7rem;
+    font-size:0.9rem;
+    font-family:'Poppins', sans-serif;
+  }
+  .input-group-custom input::placeholder{
+    color:var(--text-dim);
+  }
+  .toggle-eye{
+    background:none;
+    border:none;
+    color:var(--text-dim);
+    cursor:pointer;
+    font-size:0.95rem;
+    padding:0;
+  }
+  .toggle-eye:hover{ color:var(--purple-2); }
+
+  .forgot-row{
+    text-align:right;
+    margin-bottom:1.3rem;
+  }
+  .forgot-row a{
+    color:var(--purple-2);
+    font-size:0.8rem;
+    text-decoration:none;
+  }
+  .forgot-row a:hover{ text-decoration:underline; }
+
+  .btn-login{
+    width:100%;
+    border:none;
+    border-radius:12px;
+    padding:0.85rem;
+    font-weight:600;
+    font-size:0.95rem;
+    color:#fff;
+    background:linear-gradient(90deg, var(--purple), var(--purple-2));
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-login:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 24px rgba(123,63,228,0.4);
+    color:#fff;
+  }
+  .btn-login:active{ transform:translateY(0); }
+
+  .divider{
+    display:flex;
+    align-items:center;
+    gap:0.8rem;
+    margin:1.6rem 0 1.4rem;
+    color:var(--text-dim);
+    font-size:0.78rem;
+  }
+  .divider::before, .divider::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--field-brd);
+  }
+
+  .social-row{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    margin-bottom:1.8rem;
+  }
+  .social-btn{
+    width:46px; height:46px;
+    border-radius:50%;
+    background:var(--field);
+    border:1px solid var(--field-brd);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--white);
+    font-size:1.05rem;
+    text-decoration:none;
+    transition:transform .15s ease, border-color .15s ease;
+  }
+  .social-btn:hover{
+    transform:translateY(-3px);
+    border-color:var(--purple-2);
+    color:var(--purple-2);
+  }
+
+  .signup-row{
+    text-align:center;
+    font-size:0.85rem;
+    color:var(--text-dim);
+  }
+  .signup-row a{
+    color:var(--purple-2);
+    font-weight:600;
+    text-decoration:none;
+  }
+  .signup-row a:hover{ text-decoration:underline; }
+
+  :focus-visible{ outline:2px solid var(--purple-2); outline-offset:2px; }
