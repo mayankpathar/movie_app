@@ -8,7 +8,7 @@ function Menubar() {
                     <li><a href="#">ALL</a></li>
                     <li><a href="#">My lists</a></li>
                     <li><a href="#">Downloads</a></li>
-                  
+                    <li><a href="#">Top Rate</a></li>
                     <li>
                         <a href="#" className="btn btn-hover">
                             <span>Sign in</span>
