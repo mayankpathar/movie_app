@@ -2,12 +2,11 @@ import React from 'react'
 
 function Herosection() {
   return (
-    <div>
-         <div class="hero-section">
-        
+      <div class="hero-section">
+        {/* <!-- HERO SLIDE --> */}
         <div class="hero-slide">
             <div class="owl-carousel carousel-nav-center" id="hero-carousel">
-                
+                {/* <!-- SLIDE ITEM --> */}
                 <div class="hero-slide-item">
                     <img src="./images/black-banner.png" alt="" />
                     <div class="overlay"></div>
@@ -44,8 +43,8 @@ function Herosection() {
                         </div>
                     </div>
                 </div>
-                
-                
+                {/* <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM --> */}
                 <div class="hero-slide-item">
                     <img src="./images/John wick.jpg" alt="" />
                     <div class="overlay"></div>
@@ -82,8 +81,8 @@ function Herosection() {
                         </div>
                     </div>
                 </div>
-                
-                
+                {/* <!-- END SLIDE ITEM -->
+                <!-- SLIDE ITEM --> */}
                 <div class="hero-slide-item">
                     <img src="./images/GATG vol3.jpeg" alt="" />
                     <div class="overlay"></div>
@@ -120,14 +119,14 @@ function Herosection() {
                         </div>
                     </div>
                 </div>
-                
+                {/* <!-- END SLIDE ITEM --> */}
             </div>
         </div>
-        
-        
+        {/* <!-- END HERO SLIDE -->
+        <!-- TOP MOVIES SLIDE --> */}
         <div class="top-movies-slide">
             <div class="owl-carousel" id="top-movies-slide">
-                
+                {/* <!-- MOVIE ITEM --> */}
                 <div class="movie-item">
                     <img src="./images/series/supergirl.jpg" alt="" />
                     <div class="movie-item-content">
@@ -152,8 +151,8 @@ function Herosection() {
                         </div>
                     </div>
                 </div>
-                
-                
+                {/* <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM --> */}
                 <div class="movie-item">
                     <img src="./images/movies/captain-marvel.png" alt="" />
                     <div class="movie-item-content">
@@ -178,8 +177,8 @@ function Herosection() {
                         </div>
                     </div>
                 </div>
-                
-                
+                {/* <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM --> */}
                 <div class="movie-item">
                     <img src="./images/cartoons/demon-slayer.jpg" alt="" />
                     <div class="movie-item-content">
@@ -204,8 +203,8 @@ function Herosection() {
                         </div>
                     </div>
                 </div>
-                
-                
+                {/* <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM --> */}
                 <div class="movie-item">
                     <img src="./images/movies/blood-shot.jpg" alt="" />
                     <div class="movie-item-content">
@@ -230,8 +229,8 @@ function Herosection() {
                         </div>
                     </div>
                 </div>
-                
-                
+                {/* <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM --> */}
                 <div class="movie-item">
                     <img src="./images/series/wanda.png" alt="" />
                     <div class="movie-item-content">
@@ -256,8 +255,8 @@ function Herosection() {
                         </div>
                     </div>
                 </div>
-                
-                
+                {/* <!-- END MOVIE ITEM -->
+                <!-- MOVIE ITEM --> */}
                 <div class="movie-item">
                     <img src="./images/movies/bat-man.jpg" alt="" />
                     <div class="movie-item-content">
@@ -282,11 +281,10 @@ function Herosection() {
                         </div>
                     </div>
                 </div>
-                
+                {/* <!-- END MOVIE ITEM --> */}
             </div>
         </div>
-        
-    </div>
+        {/* <!-- END TOP MOVIES SLIDE --> */}
     </div>
   )
 }

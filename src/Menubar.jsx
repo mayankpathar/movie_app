@@ -2,7 +2,7 @@ import React from 'react'
 
 function Menubar() {
   return (
-    <div>
+    <>
       <ul class="nav-menu" id="nav-menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Genre</a></li>
@@ -15,11 +15,11 @@ function Menubar() {
                         </a>
                     </li>
                 </ul>
-              
+              {/* MOBILE MENU TOGGLE */}
                 <div class="hamburger-menu" id="hamburger-menu">
                     <div class="hamburger"></div>
                 </div>
-    </div>
+    </>
   )
 }
 

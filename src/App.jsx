@@ -10,11 +10,18 @@ import Latestanime from './Latestanime'
 import Specialmovie from './Specialmovie'
 import Pricingsection from './Pricingsection'
 import Footer from './Footer'
-import Meunbar1 from './Meunbar1'
+
 
 function App() {
   return(<>
-
+  <Header/>
+  <Herosection/>
+  <Latestmovies/>
+  <Latestseries/>
+  <Latestanime/>
+  <Specialmovie/>
+  <Pricingsection/>
+  <Footer/>
 
   </>);
 }
