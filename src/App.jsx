@@ -1,14 +1,15 @@
 import Header from './Header'
 import Footer from './Footer'
-import Downloads from './Downloads'
+
+import Toprated from './Toprated';
 
 
 
 function App() {
   return(<>
   <Header/>
- <Downloads/>
- 
+  
+ <Toprated/>
   <Footer/>
 
   </>);
