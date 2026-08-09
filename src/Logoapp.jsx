@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Logoapp() {
   return (
-    <a href="#" class="logo">
-                    <i class='bx bx-movie-play bx-tada main-color'></i>Phoe<span class="main-color">nix</span>Zone
-                </a>
+    <Link to="/" className="logo">
+                    <i className='bx bx-movie-play bx-tada main-color'></i>Phoe<span className="main-color">nix</span>Zone
+                </Link>
   )
 }
 

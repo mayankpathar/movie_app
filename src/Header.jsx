@@ -4,17 +4,14 @@ import Menubar from './Menubar'
 
 function Header() {
   return (
-    
-      
- <div class="nav-wrapper">
-        <div class="container">
-            <div class="nav">
-                <Logoapp/>
-                <Menubar/>
-            </div>
+    <div className="nav-wrapper">
+      <div className="container">
+        <div className="nav">
+          <Logoapp />
+          <Menubar />
         </div>
+      </div>
     </div>
-
   )
 }
 

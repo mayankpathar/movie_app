@@ -1,79 +1,80 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
 	return (
-		<footer class="section">
-			<div class="container">
-				<div class="row">
-					<div class="col-4 col-md-6 col-sm-12">
-						<div class="content">
-							<a href="#" class="logo">
-								<i class='bx bx-movie-play bx-tada main-color'></i>Phoe<span class="main-color">nix</span>Zone
-							</a>
+		<footer className="section">
+			<div className="container">
+				<div className="row">
+					<div className="col-4 col-md-6 col-sm-12">
+						<div className="content">
+							<Link to="/" className="logo">
+								<i className='bx bx-movie-play bx-tada main-color'></i>Phoe<span className="main-color">nix</span>Zone
+							</Link>
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut veniam ex quos hic id nobis beatae earum sapiente! Quod ipsa exercitationem officiis non error illum minima iusto et. Dolores, quibusdam?
 							</p>
-							<div class="social-list">
-								<a href="#" class="social-item">
-									<i class="bx bxl-facebook"></i>
-								</a>
-								<a href="#" class="social-item">
-									<i class="bx bxl-twitter"></i>
-								</a>
-								<a href="#" class="social-item">
-									<i class="bx bxl-instagram"></i>
-								</a>
+							<div className="social-list">
+								<Link to="/" className="social-item">
+									<i className="bx bxl-facebook"></i>
+								</Link>
+								<Link to="/" className="social-item">
+									<i className="bx bxl-twitter"></i>
+								</Link>
+								<Link to="/" className="social-item">
+									<i className="bx bxl-instagram"></i>
+								</Link>
 							</div>
 						</div>
 					</div>
-					<div class="col-8 col-md-6 col-sm-12">
-						<div class="row">
-							<div class="col-3 col-md-6 col-sm-6">
-								<div class="content">
+					<div className="col-8 col-md-6 col-sm-12">
+						<div className="row">
+							<div className="col-3 col-md-6 col-sm-6">
+								<div className="content">
 									<p><b>Flix</b></p>
-									<ul class="footer-menu">
-										<li><a href="#">About us</a></li>
-										<li><a href="#">My profile</a></li>
-										<li><a href="#">Pricing plans</a></li>
-										<li><a href="#">Contacts</a></li>
+									<ul className="footer-menu">
+										<li><Link to="/about">About us</Link></li>
+										<li><Link to="/profile">My profile</Link></li>
+										<li><Link to="/pricing">Pricing plans</Link></li>
+										<li><Link to="/contacts">Contacts</Link></li>
 									</ul>
 								</div>
 							</div>
-							<div class="col-3 col-md-6 col-sm-6">
-								<div class="content">
+							<div className="col-3 col-md-6 col-sm-6">
+								<div className="content">
 									<p><b>Browse</b></p>
-									<ul class="footer-menu">
-										<li><a href="#">About us</a></li>
-										<li><a href="#">My profile</a></li>
-										<li><a href="#">Pricing plans</a></li>
-										<li><a href="#">Contacts</a></li>
+									<ul className="footer-menu">
+										<li><Link to="/about">About us</Link></li>
+										<li><Link to="/profile">My profile</Link></li>
+										<li><Link to="/pricing">Pricing plans</Link></li>
+										<li><Link to="/contacts">Contacts</Link></li>
 									</ul>
 								</div>
 							</div>
-							<div class="col-3 col-md-6 col-sm-6">
-								<div class="content">
+							<div className="col-3 col-md-6 col-sm-6">
+								<div className="content">
 									<p><b>Help</b></p>
-									<ul class="footer-menu">
-										<li><a href="#">About us</a></li>
-										<li><a href="#">My profile</a></li>
-										<li><a href="#">Pricing plans</a></li>
-										<li><a href="#">Contacts</a></li>
+									<ul className="footer-menu">
+										<li><Link to="/about">About us</Link></li>
+										<li><Link to="/profile">My profile</Link></li>
+										<li><Link to="/pricing">Pricing plans</Link></li>
+										<li><Link to="/contacts">Contacts</Link></li>
 									</ul>
 								</div>
 							</div>
-							<div class="col-3 col-md-6 col-sm-6">
-								<div class="content">
+							<div className="col-3 col-md-6 col-sm-6">
+								<div className="content">
 									<p><b>Download app</b></p>
-									<ul class="footer-menu">
+									<ul className="footer-menu">
 										<li>
-											<a href="#">
+											<Link to="/">
 												<img src="./images/google-play.png" alt="" />
-											</a>
+											</Link>
 										</li>
 										<li>
-											<a href="#">
+											<Link to="/">
 												<img src="./images/app-store.png" alt="" />
-											</a>
+											</Link>
 										</li>
 									</ul>
 								</div>
