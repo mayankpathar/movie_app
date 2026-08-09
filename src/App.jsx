@@ -1,18 +1,17 @@
 import Header from './Header'
 import Footer from './Footer'
-
-import Toprated from './Toprated';
+import Sign from './Sign'
 
 
 
 function App() {
-  return(<>
-  <Header/>
-  
- <Toprated/>
-  <Footer/>
-
-  </>);
+  return (
+    <>
+      <Header />
+      <Sign />
+      <Footer />
+    </>
+  )
 }
 
 export default App
