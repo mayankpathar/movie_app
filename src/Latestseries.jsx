@@ -15,6 +15,12 @@ function Latestseries() {
                         <div class="movie-item-title">
                             Supergirl
                         </div>
+                        <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
@@ -41,6 +47,12 @@ function Latestseries() {
                         <div class="movie-item-title">
                             Stranger Things
                         </div>
+                        <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
@@ -67,6 +79,12 @@ function Latestseries() {
                         <div class="movie-item-title">
                             Star Trek
                         </div>
+                        <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
@@ -93,6 +111,12 @@ function Latestseries() {
                         <div class="movie-item-title">
                             Penthouses
                         </div>
+                        <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
@@ -119,6 +143,12 @@ function Latestseries() {
                         <div class="movie-item-title">
                             Mandalorian
                         </div>
+                        <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
@@ -145,6 +175,12 @@ function Latestseries() {
                         <div class="movie-item-title">
                             The Falcon And The Winter Soldier
                         </div>
+                        <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>
@@ -171,6 +207,12 @@ function Latestseries() {
                         <div class="movie-item-title">
                             Wanda Vision
                         </div>
+                        <div class="item-action top-down delay-6">
+                                <a href="#" class="btn btn-hover">
+                                    <i class="bx bxs-right-arrow"></i>
+                                    <span>Watch now</span>
+                                </a>
+                            </div>
                         <div class="movie-infos">
                             <div class="movie-info">
                                 <i class="bx bxs-star"></i>

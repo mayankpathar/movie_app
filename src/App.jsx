@@ -5,6 +5,7 @@ import heroImg from './assets/hero.png'
 import Header from './Header'
 import All from './All'
 import Footer from './Footer'
+import Home from './Home'
 
 
 

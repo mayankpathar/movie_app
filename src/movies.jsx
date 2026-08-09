@@ -1,11 +1,12 @@
 import React from 'react'
+import Latestmovies from './Latestmovies'
 
-function movies() {
+function Movies() {
   return (
     <>
-      
+      <Latestmovies/>
     </>
   )
 }
 
-export default movies
+export default Movies
