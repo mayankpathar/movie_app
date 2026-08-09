@@ -6,13 +6,15 @@ import Header from './Header'
 import All from './All'
 import Footer from './Footer'
 import Home from './Home'
+import My_list from './My_list'
 
 
 
 function App() {
   return(<>
   <Header/>
- <All/>
+ <My_list/>
+ 
   <Footer/>
 
   </>);

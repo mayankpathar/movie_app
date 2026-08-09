@@ -1,0 +1,41 @@
+/* Watchlist / My List page styles */
+.watchlist-page { padding: 28px 40px; color: #fff; }
+.watchlist-header { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom:18px }
+.watchlist-header h2 { margin:0; font-size:28px }
+.watchlist-header .subtitle { margin:4px 0; opacity:0.8 }
+.watchlist-header .count { margin:0; opacity:0.7 }
+.watchlist-controls { display:flex; align-items:center; gap:8px }
+.sort-select { padding:6px 10px; border-radius:6px; background:#111; color:#fff; border:1px solid #222 }
+.view-grid, .view-list { background:#111; color:#fff; border:1px solid #222; padding:6px 8px; border-radius:6px }
+
+.watchlist-items { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px }
+.watchlist-item { display:flex; align-items:center; gap:16px; background:rgba(255,255,255,0.02); padding:12px; border-radius:8px; border:1px solid rgba(255,255,255,0.03) }
+.thumb { width:84px; flex:0 0 84px }
+.thumb-img { width:84px; height:120px; background-color:#111; background-size:cover; background-position:center; border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.6); border:1px solid rgba(255,255,255,0.03) }
+.item-main { flex:1 }
+.item-meta-row { display:flex; align-items:center; gap:8px; margin-bottom:6px }
+.item-title { margin:0; font-size:18px; color:#fff; margin-bottom:6px }
+.meta-badges { display:flex; gap:6px; align-items:center }
+.badge { display:inline-block; padding:4px 6px; font-size:12px; border-radius:6px; background:#000000; color:#ffffff; font-weight:700; border:1px solid rgba(255,255,255,0.06) }
+.item-desc { margin:8px 0 0; color:rgba(255,255,255,0.75); font-size:14px; max-width:720px }
+.item-actions {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 16px;
+	margin-left: 12px;
+	width: auto;
+	min-width: auto;
+}
+.added { display:flex; align-items:center; gap:8px; color:rgba(255,255,255,0.9); font-size:13px }
+.added i { font-size:20px; display:inline-block; padding:4px; border-radius:6px; background: rgba(255,255,255,0.02); }
+.added-text { text-align:left; font-size:12px }
+.play-btn { background:#000000; color:#ffffff; width:40px; height:40px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:20px; border:1px solid rgba(255,255,255,0.06); box-shadow:none; }
+.more-btn { background:transparent; border:none; color:rgba(255,255,255,0.7); font-size:20px; transform:none; }
+
+@media (max-width:800px) {
+	.watchlist-item { flex-direction:column; align-items:flex-start }
+	.item-actions { flex-direction:row; width:100%; justify-content:space-between }
+	.item-actions { width:auto; min-width: auto; }
+}
+

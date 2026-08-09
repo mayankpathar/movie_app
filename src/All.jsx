@@ -8,7 +8,9 @@ function All() {
   return (
     <>
       <Meunbar1/>
-       <Animes/>
+       <Movies/>
+        <Series/>
+        <Animes/>
     </>
   )
 }
