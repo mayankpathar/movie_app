@@ -5,12 +5,12 @@ function Menubar() {
     <>
       <ul class="nav-menu" id="nav-menu">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Genre</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">Series</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#">ALL</a></li>
+                    <li><a href="#">My lists</a></li>
+                    <li><a href="#">Downloads</a></li>
+                  
                     <li>
-                        <a href="#" class="btn btn-hover">
+                        <a href="#" className="btn btn-hover">
                             <span>Sign in</span>
                         </a>
                     </li>
