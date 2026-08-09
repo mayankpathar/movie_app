@@ -31,7 +31,7 @@ function GOTGVol3detail() {
 
                         <div className="title-block">
                             <h1>Guardians of the Galaxy Vol. 3</h1>
-                            <div className="meta">2023 • PG-13 • 2h 14m • <span className="rating">★ 7.3/10</span></div>
+                            <div className="meta">2023 • 2h 14m • <span className="rating">★ 7.3/10</span></div>
                             <p className="synopsis">
                                 Peter Quill, Gamora, Drax, Rocket, and Groot continue their adventures in the cosmos.
                                 a C.E.O., but his tragic past may doom the project and his team to disaster.

@@ -31,7 +31,7 @@ function Theatreofthedeaddetail() {
 
                         <div className="title-block">
                             <h1>Theatre of the Dead</h1>
-                            <div className="meta">2023 • PG-13 • 2h 14m • <span className="rating">★ 7.3/10</span></div>
+                            <div className="meta">2023 • 2h 14m • <span className="rating">★ 7.3/10</span></div>
                             <p className="synopsis">
                                 A group of friends discovers a haunted theater where the spirits of past performers seek revenge on the living. As they delve deeper into the theater's dark history, they must confront their own fears and survive the night.
                                  </p>

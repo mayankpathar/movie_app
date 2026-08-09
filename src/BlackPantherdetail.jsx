@@ -31,7 +31,7 @@ function BlackPantherdetail() {
 
                         <div className="title-block">
                             <h1>Black Panther</h1>
-                            <div className="meta">2018 • PG-13 • 2h 14m • <span className="rating">★ 7.3/10</span></div>
+                            <div className="meta">2018 • 2h 14m • <span className="rating">★ 7.3/10</span></div>
                             <p className="synopsis">
                                 T'Challa, the King of Wakanda, must protect his nation from external threats and internal conflicts.
                                 a C.E.O., but his tragic past may doom the project and his team to disaster.

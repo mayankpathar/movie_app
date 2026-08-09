@@ -16,7 +16,7 @@ const similar = [
     { img: './images/black-banner.png', title: 'Black Panther', year: 1999, rating: 8.7 },
 ]
 
-function Transformerdetail() {
+function YourNamedetail() {
   return (
     <div>
       <div className="movie-details-page">
@@ -24,17 +24,17 @@ function Transformerdetail() {
                 <main className="movie-main">
                     <div className="left-col">
                         <div className="poster-wrap">
-                            <img src="./images/movies/transformer.jpg" alt="Transformers poster" />
+                            <img src="./images/cartoons/your-name.jpg" alt="Your Name poster" />
                             <button className="play-big">▶</button>
                             <button className="watch-trailer small">Watch Trailer</button>
                         </div>
 
                         <div className="title-block">
-                            <h1>Transformers</h1>
-                            <div className="meta">2023 • 2h 14m • <span className="rating">★ 7.3/10</span></div>
+                            <h1>Your Name</h1>
+                            <div className="meta">2019 • 1h 52m • <span className="rating">★ 7.8/10</span></div>
                             <p className="synopsis">
-                                A group of friends discovers a haunted theater where the spirits of past performers seek revenge on the living. As they delve deeper into the theater's dark history, they must confront their own fears and survive the night.
-                                </p>
+                                A high school student runs away from his hometown and meets a mysterious girl.
+                            </p>
 
                             <div className="actions">
                                 <button className="btn primary">▶ Watch Now</button>
@@ -112,4 +112,4 @@ function Transformerdetail() {
   )
 }
 
-export default Transformerdetail
+export default YourNamedetail

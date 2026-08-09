@@ -16,7 +16,7 @@ const similar = [
     { img: './images/black-banner.png', title: 'Black Panther', year: 1999, rating: 8.7 },
 ]
 
-function Transformerdetail() {
+function WandaVision() {
   return (
     <div>
       <div className="movie-details-page">
@@ -24,17 +24,17 @@ function Transformerdetail() {
                 <main className="movie-main">
                     <div className="left-col">
                         <div className="poster-wrap">
-                            <img src="./images/movies/transformer.jpg" alt="Transformers poster" />
+                            <img src="./images/series/wanda.png" alt="Wanda Vision poster" />
                             <button className="play-big">▶</button>
                             <button className="watch-trailer small">Watch Trailer</button>
                         </div>
 
                         <div className="title-block">
-                            <h1>Transformers</h1>
-                            <div className="meta">2023 • 2h 14m • <span className="rating">★ 7.3/10</span></div>
+                            <h1>Wanda Vision</h1>
+                            <div className="meta">2020 • 2h 14m • <span className="rating">★ 7.0/10</span></div>
                             <p className="synopsis">
-                                A group of friends discovers a haunted theater where the spirits of past performers seek revenge on the living. As they delve deeper into the theater's dark history, they must confront their own fears and survive the night.
-                                </p>
+                                A woman with two different identities struggles to balance her life as a superhero and her personal relationships.
+                            </p>
 
                             <div className="actions">
                                 <button className="btn primary">▶ Watch Now</button>
@@ -112,4 +112,4 @@ function Transformerdetail() {
   )
 }
 
-export default Transformerdetail
+export default WandaVision

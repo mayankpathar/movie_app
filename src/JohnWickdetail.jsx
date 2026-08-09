@@ -31,7 +31,7 @@ function JohnWickdetail() {
 
 						<div className="title-block">
 							<h1>John Wick</h1>
-							<div className="meta">2012 • PG-13 • 1h 41m • <span className="rating">★ 7.2/10</span></div>
+							<div className="meta">2012 • 1h 41m • <span className="rating">★ 7.2/10</span></div>
 							<p className="synopsis">
 								A former assassin comes out of retirement to track down the gang that killed his dog and revenge his wife.
 								a C.E.O., but his tragic past may doom the project and his team to disaster.
