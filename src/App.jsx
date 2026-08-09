@@ -1,7 +1,10 @@
 import Header from './Header'
 import Footer from './Footer'
-import Sign from './Sign'
-import Moviedetails from './Moviedetails'
+import JohnWickdetail from './JohnWickdetail'
+import BlackPantherdetail from './BlackPantherdetail'
+import GOTGVol3detail from './GOTGVol3detail'
+import Transformerdetail from './Transformerdetail'
+
 
 
 
@@ -9,7 +12,9 @@ function App() {
   return (
     <>
       <Header />
-      <Moviedetails/>
+    <Transformerdetail />
+    
+   
       <Footer />
     </>
   )

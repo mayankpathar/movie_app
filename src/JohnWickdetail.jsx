@@ -1,6 +1,4 @@
-
 import React from 'react'
-
 
 const cast = [
 	{ name: 'Leonardo DiCaprio', role: 'Cobb', img: '/images/uploads/cast1.jpg' },
@@ -12,30 +10,30 @@ const cast = [
 
 const similar = [
 	{ img: '/images/uploads/mv-item1.jpg', title: 'Shutter Island', year: 2010, rating: 8.1 },
-	{ img: '/images/uploads/mv-item2.jpg', title: 'The Matrix', year: 1999, rating: 8.7 },
+	{ img: './images/black-banner.png', title: 'Black Panther', year: 1999, rating: 8.7 },
 	{ img: '/images/uploads/mv-item3.jpg', title: 'Interstellar', year: 2014, rating: 8.6 },
 	{ img: '/images/uploads/mv-item4.jpg', title: 'Prestige', year: 2006, rating: 8.5 },
 	{ img: '/images/uploads/mv-item5.jpg', title: 'Memento', year: 2000, rating: 8.4 },
 ]
 
-export default function Moviedetails() {
-	return (
-		<div className="movie-details-page">
+function JohnWickdetail() {
+  return (
+    <div>
+      <div className="movie-details-page">
 			<div className="movie-container">
 				<main className="movie-main">
 					<div className="left-col">
 						<div className="poster-wrap">
-							<img src="/images/uploads/poster1.jpg" alt="Inception poster" />
+							<img src="./images/John wick.jpg" alt="John Wick poster" />
 							<button className="play-big">▶</button>
 							<button className="watch-trailer small">Watch Trailer</button>
 						</div>
 
 						<div className="title-block">
-							<h1>Inception</h1>
-							<div className="meta">2010 • PG-13 • 2h 28m • <span className="rating">★ 8.8/10</span></div>
+							<h1>John Wick</h1>
+							<div className="meta">2012 • PG-13 • 1h 41m • <span className="rating">★ 7.2/10</span></div>
 							<p className="synopsis">
-								A thief who steals corporate secrets through the use of dream-sharing
-								technology is given the inverse task of planting an idea into the mind of
+								A former assassin comes out of retirement to track down the gang that killed his dog and revenge his wife.
 								a C.E.O., but his tragic past may doom the project and his team to disaster.
 							</p>
 
@@ -111,5 +109,8 @@ export default function Moviedetails() {
 				</aside>
 			</div>
 		</div>
-	)
+    </div>
+  )
 }
+
+export default JohnWickdetail
