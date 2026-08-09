@@ -14,7 +14,7 @@ import Meunbar1 from './Meunbar1'
 
 function App() {
   return(<>
-<Meunbar1/>
+
 
   </>);
 }
