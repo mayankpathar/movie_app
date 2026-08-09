@@ -7,7 +7,7 @@ const sampleItems = [
         year: 2007,
         rating: '7.8',
         duration: '2h 24m',
-       date: 'May 12, 2025',
+        date: 'May 12, 2025',
         poster: '/images/movies/transformer.jpg'
     },
     {
@@ -23,7 +23,7 @@ const sampleItems = [
         year: 1989,
         rating: '8.8',
         duration: '115h 24m',
-       date: 'May 08, 2025',
+        date: 'May 08, 2025',
         poster: '/images/cartoons/dragon.jpg'
     },
 ]
@@ -39,25 +39,25 @@ function My_list() {
                         <p className="subtitle">Movies and shows you want to watch later.</p>
                         <p className="count">{sampleItems.length} Items</p>
                     </div>
-                    
+
                 </div>
 
                 <ul className="watchlist-items">
                     {sampleItems.map((it, i) => (
                         <li key={i} className="watchlist-item">
                             <div className="thumb">
-                                <div className="thumb-img" style={{backgroundImage: `url(${it.poster})`}} aria-hidden="true"> </div>
+                                <div className="thumb-img" style={{ backgroundImage: `url(${it.poster})` }} aria-hidden="true"> </div>
                             </div>
                             <div className="item-main">
-                                
+
                                 <h4 className="item-title">{it.title}</h4>
-                               <div className="item-meta-row">
+                                <div className="item-meta-row">
                                     <div className="meta-badges">
                                         <span className="badge year">{it.year}</span>
                                         <span className="badge rating"><div class="movie-info">
-                                        <i class="bx bxs-star"></i>
-                                        <span>{it.rating}</span>
-                                    </div></span>
+                                            <i class="bx bxs-star"></i>
+                                            <span>{it.rating}</span>
+                                        </div></span>
                                         <span className="badge duration">{it.duration}</span>
                                     </div>
                                 </div>
