@@ -10,11 +10,11 @@ const cast = [
 
 const similar = [
     { img: '/images/uploads/mv-item1.jpg', title: 'Shutter Island', year: 2010, rating: 8.1 },
-    { img: './images/John wick.jpg', title: 'John Wick', year: 2018, rating: 7.3 },
+    { img: '/images/uploads/mv-item2.jpg', title: 'The Dark Knight', year: 2008, rating: 9.0 },
     { img: '/images/uploads/mv-item3.jpg', title: 'Interstellar', year: 2014, rating: 8.6 },
     { img: '/images/uploads/mv-item4.jpg', title: 'Prestige', year: 2006, rating: 8.5 },
     { img: '/images/uploads/mv-item5.jpg', title: 'Memento', year: 2000, rating: 8.4 },
-]
+]           
 
 function BlackPantherdetail() {
   return (
@@ -24,7 +24,7 @@ function BlackPantherdetail() {
                 <main className="movie-main">
                     <div className="left-col">
                         <div className="poster-wrap">
-                            <img src="./images/black-banner.png" alt="Black Panther poster" />
+                            <img src="/images/black-banner.png" alt="Black Panther poster" />
                             <button className="play-big">▶</button>
                             <button className="watch-trailer small">Watch Trailer</button>
                         </div>

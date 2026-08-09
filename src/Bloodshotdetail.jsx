@@ -9,11 +9,11 @@ const cast = [
 ]
 
 const similar = [
-    { img: './images/GATG vol3.jpeg', title: 'Guardians of the Galaxy Vol. 3', year: 2010, rating: 8.1 },
-    { img: './images/John wick.jpg', title: 'John Wick', year: 2018, rating: 7.3 },
-    { img: '/images/uploads/mv-item5.jpg', title: 'Memento', year: 2000, rating: 8.4 },
+    { img: '/images/uploads/mv-item1.jpg', title: 'Shutter Island', year: 2010, rating: 8.1 },
+    { img: '/images/uploads/mv-item2.jpg', title: 'The Dark Knight', year: 2008, rating: 9.0 },
+    { img: '/images/uploads/mv-item3.jpg', title: 'Interstellar', year: 2014, rating: 8.6 },
     { img: '/images/uploads/mv-item4.jpg', title: 'Prestige', year: 2006, rating: 8.5 },
-    { img: './images/black-banner.png', title: 'Black Panther', year: 1999, rating: 8.7 },
+    { img: '/images/uploads/mv-item5.jpg', title: 'Memento', year: 2000, rating: 8.4 },
 ]
 
 function Bloodshotdetail() {
@@ -24,7 +24,7 @@ function Bloodshotdetail() {
                 <main className="movie-main">
                     <div className="left-col">
                         <div className="poster-wrap">
-                            <img src="./images/movies/blood-shot.jpg" alt="Blood Shot poster" />
+                            <img src="/images/movies/blood-shot.jpg" alt="Blood Shot poster" />
                             <button className="play-big">▶</button>
                             <button className="watch-trailer small">Watch Trailer</button>
                         </div>
