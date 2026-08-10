@@ -63,7 +63,7 @@ const topRatedItems = [
     year: 1994,
     rating: '8.8',
     duration: '2h 34m',
-    poster: '/images/movies/love-roise.jpg',
+    poster: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlvNurXLcnJu8dLBL5becB20ybIO7keqfONDzVbvLQ2Q&s=10',
   },
   {
     rank: 9,
@@ -87,7 +87,7 @@ const topRatedItems = [
     year: 2010,
     rating: '8.7',
     duration: '2h 28m',
-    poster: '/images/movies/blood-shot.jpg',
+    poster: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQg-lz9VcmtwA-IWSxqlLwRqL8yrJHRKNs5mkdMRXOyw&s=10',
   },
   {
     rank: 12,
@@ -95,7 +95,7 @@ const topRatedItems = [
     year: 1999,
     rating: '8.7',
     duration: '2h 19m',
-    poster: '/images/movies/end-game.jpg',
+    poster: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbGav2txLP4MLUNwuIQAg26r_M3Urtg1XmZ0w28Ue8A&s=10',
   },
 ]
 
