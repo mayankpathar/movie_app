@@ -77,7 +77,7 @@ function App() {
         <Route path="/movie/weathering-with-you" element={<WeatheringWithYoudetail/>} />
         <Route path="/movie/your-name" element={<YourNamedetail/>} />
 
-        {/* Catch-all: redirect unknown routes to Home */}
+  
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
