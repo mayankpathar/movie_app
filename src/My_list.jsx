@@ -1,83 +1,65 @@
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import MovieCard from './components/MovieCard';
 
-import React from 'react'
-
-const sampleItems = [
-    {
-        title: 'Transformer',
-        year: 2007,
-        rating: '7.8',
-        duration: '2h 24m',
-        date: 'May 12, 2025',
-        poster: '/images/movies/transformer.jpg'
-    },
-    {
-        title: 'Batman',
-        year: 2022,
-        rating: '8.5',
-        duration: '2h 56m',
-        date: 'May 10, 2025',
-        poster: '/images/movies/bat-man.jpg'
-    },
-    {
-        title: 'Dragon Ball',
-        year: 1989,
-        rating: '8.8',
-        duration: '115h 24m',
-        date: 'May 08, 2025',
-        poster: '/images/cartoons/dragon.jpg'
-    },
-]
 function My_list() {
-    return (
-        <div>
+  const navigate = useNavigate();
 
+  // React Hooks: useState
+  const [watchlist, setWatchlist] = useState([]);
 
-            <div className="watchlist-page container">
-                <div className="watchlist-header">
-                    <div>
-                        <h2>My list</h2>
-                        <p className="subtitle">Movies and shows you want to watch later.</p>
-                        <p className="count">{sampleItems.length} Items</p>
-                    </div>
+  // React Hooks: useEffect
+  useEffect(() => {
+    const saved = JSON.parse(localStorage.getItem('my_watchlist') || '[]');
+    setWatchlist(saved);
+  }, []);
 
-                </div>
+  const handleClearAll = () => {
+    localStorage.removeItem('my_watchlist');
+    setWatchlist([]);
+  };
 
-                <ul className="watchlist-items">
-                    {sampleItems.map((it, i) => (
-                        <li key={i} className="watchlist-item">
-                            <div className="thumb">
-                                <div className="thumb-img" style={{ backgroundImage: `url(${it.poster})` }} aria-hidden="true"> </div>
-                            </div>
-                            <div className="item-main">
+  return (
+    <div className="section" style={{ minHeight: '80vh', paddingTop: '30px' }}>
+      <div className="container">
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '30px'
+        }}>
+          <div className="section-header" style={{ margin: 0 }}>
+            My Watchlist ({watchlist.length})
+          </div>
 
-                                <h4 className="item-title">{it.title}</h4>
-                                <div className="item-meta-row">
-                                    <div className="meta-badges">
-                                        <span className="badge year">{it.year}</span>
-                                        <span className="badge rating"><div class="movie-info">
-                                            <i class="bx bxs-star"></i>
-                                            <span>{it.rating}</span>
-                                        </div></span>
-                                        <span className="badge duration">{it.duration}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="item-actions">
-                                <div className="added">
-                                    <i className='bx bx-calendar'></i>
-                                    <div className="added-text">Added on<br /><strong>{it.date}</strong></div>
-                                </div>
-                                <button className="play-btn" aria-label="play">▶</button>
-                                <button className="more-btn" aria-label="more">⋮</button>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
-
+          {watchlist.length > 0 && (
+            <button onClick={handleClearAll} className="btn outline" style={{ borderColor: '#ff4d4d', color: '#ff4d4d' }}>
+              Clear All
+            </button>
+          )}
         </div>
-    )
+
+        {watchlist.length === 0 ? (
+          <div style={{ textAlign: 'center', color: '#a0a0a0', margin: '80px 0' }}>
+            <i className="bx bx-bookmark-plus" style={{ fontSize: '64px', marginBottom: '15px' }}></i>
+            <h3>Your Watchlist is empty</h3>
+            <p style={{ marginTop: '10px' }}>
+              Explore movies and TV shows and click <strong>"+ Add to Watchlist"</strong> to save them here!
+            </p>
+            <button onClick={() => navigate('/movies')} className="btn primary" style={{ marginTop: '20px' }}>
+              Browse Movies
+            </button>
+          </div>
+        ) : (
+          <div className="movies-grid">
+            {watchlist.map((item) => (
+              <MovieCard key={`${item.media_type || 'movie'}-${item.id}`} item={item} mediaType={item.media_type || 'movie'} />
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
 }
 
-export default My_list
+export default My_list;

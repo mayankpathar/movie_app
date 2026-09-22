@@ -1,486 +1,106 @@
-import React from 'react'
-import Latestanime from './Latestanime'
-import Meunbar1 from './Meunbar1'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { tmdbApi } from './services/tmdb';
+import MovieCard from './components/MovieCard';
 
 function Animes() {
-    return (
-        <>
-            <Meunbar1 />
-              <div className="section">
-                    <div className="container">
-                        <div className="movies-slide carousel-nav-center owl-carousel">
-                            
+  // React Hooks: useState
+  const [animes, setAnimes] = useState([]);
+  const [type, setType] = useState('movie'); // 'movie' or 'tv'
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(true);
 
-                            <div className="movie-item">
-                                <img src="./images/cartoons/dragon.jpg" alt="Dragonball" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Dragonball
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/dragonball" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+  // React Hooks: useEffect
+  useEffect(() => {
+    let isMounted = true;
+    setLoading(true);
 
-                            <div className="movie-item">
-                                <img src="./images/cartoons/coco.jpg" alt="Coco" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Coco
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/coco" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            <div className="movie-item">
-                                <img src="./images/cartoons/over-the-moon.jpg" alt="Over The Moon" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Over The Moon
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/over-the-moon" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                            <div className="movie-item">
-                                <img src="./images/cartoons/weathering.jpg" alt="Weathering With You" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Weathering With You
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/weathering-with-you" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="movie-item">
-                                <img src="./images/cartoons/croods.jpg" alt="Croods" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Croods
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/croods" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                            <div className="movie-item">
-                                <img src="./images/cartoons/your-name.jpg" alt="Your Name" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Your Name
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/your-name" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                           
-                             <div className="movie-item">
-                                <img src="./images/cartoons/demon-slayer.jpg" alt="Demon Slayer" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Demon Slayer
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/demon-slayer" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-                </div>
-             <div className="section">
-                    <div className="container">
-                        <div className="section-header">
-                            Top Animes
-                        </div>
-                        <div className="movies-slide carousel-nav-center owl-carousel">
-                            
-                           
-                            
-                            <div className="movie-item">
-                                <img src="./images/cartoons/over-the-moon.jpg" alt="Over The Moon" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Over The Moon
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/over-the-moon" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                            <div className="movie-item">
-                                <img src="./images/cartoons/weathering.jpg" alt="Weathering With You" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Weathering With You
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/weathering-with-you" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                            <div className="movie-item">
-                                <img src="./images/cartoons/your-name.jpg" alt="Your Name" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Your Name
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/your-name" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                            <div className="movie-item">
-                                <img src="./images/cartoons/coco.jpg" alt="Coco" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Coco
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/coco" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
+    const fetchAnime = async () => {
+      const data = type === 'tv' 
+        ? await tmdbApi.getAnimeSeries(page)
+        : await tmdbApi.getAnimeMovies(page);
 
-                             <div className="movie-item">
-                                <img src="./images/cartoons/demon-slayer.jpg" alt="Demon Slayer" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Demon Slayer
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/demon-slayer" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                            <div className="movie-item">
-                                <img src="./images/cartoons/croods.jpg" alt="Croods" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Croods
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/croods" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            
-                            <div className="movie-item">
-                                <img src="./images/cartoons/dragon.jpg" alt="Dragonball" />
-                                <div className="movie-item-content">
-                                    <div className="movie-item-title">
-                                        Dragonball
-                                    </div>
-                                    <div className="item-action top-down delay-6">
-                                            <Link to="/movie/dragonball" className="btn btn-hover">
-                                                <i className="bx bxs-right-arrow"></i>
-                                                <span>Watch now</span>
-                                            </Link>
-                                        </div>
-                                    <div className="movie-infos">
-                                        <div className="movie-info">
-                                            <i className="bx bxs-star"></i>
-                                            <span>9.5</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <i className="bx bxs-time"></i>
-                                            <span>120 mins</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>HD</span>
-                                        </div>
-                                        <div className="movie-info">
-                                            <span>16+</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            <Latestanime />
-        </>
-    )
+      if (isMounted) {
+        if (data && data.results) {
+          setAnimes(data.results);
+        }
+        setLoading(false);
+      }
+    };
+
+    fetchAnime();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [type, page]);
+
+  return (
+    <div className="section" style={{ minHeight: '80vh', paddingTop: '30px' }}>
+      <div className="container">
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          marginBottom: '30px',
+          gap: '15px'
+        }}>
+          <div className="section-header" style={{ margin: 0 }}>
+            Anime Collection
+          </div>
+
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <button
+              onClick={() => { setType('movie'); setPage(1); }}
+              className={`btn ${type === 'movie' ? 'primary' : 'outline'}`}
+            >
+              Anime Movies
+            </button>
+            <button
+              onClick={() => { setType('tv'); setPage(1); }}
+              className={`btn ${type === 'tv' ? 'primary' : 'outline'}`}
+            >
+              Anime Shows
+            </button>
+          </div>
+        </div>
+
+        {loading ? (
+          <div style={{ textAlign: 'center', color: '#fff', padding: '60px 0' }}>
+            <h3>Loading Anime Titles...</h3>
+          </div>
+        ) : (
+          <>
+            <div className="movies-grid">
+              {animes.map((anime) => (
+                <MovieCard key={anime.id} item={anime} mediaType={type} />
+              ))}
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop: '40px' }}>
+              <button
+                disabled={page <= 1}
+                onClick={() => setPage(p => Math.max(1, p - 1))}
+                className="btn outline"
+                style={{ opacity: page <= 1 ? 0.5 : 1, cursor: page <= 1 ? 'not-allowed' : 'pointer' }}
+              >
+                ← Previous Page
+              </button>
+              <span style={{ display: 'flex', alignItems: 'center', color: '#fff', fontWeight: 'bold' }}>
+                Page {page}
+              </span>
+              <button
+                onClick={() => setPage(p => p + 1)}
+                className="btn primary"
+              >
+                Next Page →
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
 }
 
-export default Animes
+export default Animes;

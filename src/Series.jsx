@@ -1,506 +1,109 @@
-import React from 'react'
-import Latestseries from './Latestseries'
-import Meunbar1 from './Meunbar1'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import { tmdbApi } from './services/tmdb';
+import MovieCard from './components/MovieCard';
 
 function Series() {
-  return (
-    <>
-      <Meunbar1 />
-      <div className="section">
-        <div className="container">
-           
-            <div className="movies-slide carousel-nav-center owl-carousel">
-                
-                 <div className="movie-item">
-                    <img src="./images/series/the-falcon.webp" alt="The Falcon And The Winter Soldier" />
-                    <div className="movie-item-content">
-                        <div className="movie-item-title">
-                            The Falcon And The Winter Soldier
-                        </div>
-                        <div className="item-action top-down delay-6">
-                                <Link to="/movie/the-falcon-and-the-winter-soldier" className="btn btn-hover">
-                                    <i className="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
-                                </Link>
-                            </div>
-                        <div className="movie-infos">
-                            <div className="movie-info">
-                                <i className="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div className="movie-info">
-                                <i className="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div className="movie-item">
-                    <img src="./images/series/stranger-thing.jpg" alt="Stranger Things" />
-                    <div className="movie-item-content">
-                        <div className="movie-item-title">
-                            Stranger Things
-                        </div>
-                        <div className="item-action top-down delay-6">
-                                <Link to="/movie/stranger-things" className="btn btn-hover">
-                                    <i className="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
-                                </Link>
-                            </div>
-                        <div className="movie-infos">
-                            <div className="movie-info">
-                                <i className="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div className="movie-info">
-                                <i className="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div className="movie-item">
-                    <img src="./images/series/wanda.png" alt="Wanda Vision" />
-                    <div className="movie-item-content">
-                        <div className="movie-item-title">
-                            Wanda Vision
-                        </div>
-                        <div className="item-action top-down delay-6">
-                                <Link to="/movie/wanda-vision" className="btn btn-hover">
-                                    <i className="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
-                                </Link>
-                            </div>
-                        <div className="movie-infos">
-                            <div className="movie-info">
-                                <i className="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div className="movie-info">
-                                <i className="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="movie-item">
-                    <img src="./images/series/penthouses.jpg" alt="Penthouses" />
-                    <div className="movie-item-content">
-                        <div className="movie-item-title">
-                            Penthouses
-                        </div>
-                        <div className="item-action top-down delay-6">
-                                <Link to="/movie/penthouses" className="btn btn-hover">
-                                    <i className="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
-                                </Link>
-                            </div>
-                        <div className="movie-infos">
-                            <div className="movie-info">
-                                <i className="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div className="movie-info">
-                                <i className="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div className="movie-item">
-                    <img src="./images/series/mandalorian.jpg" alt="Mandalorian" />
-                    <div className="movie-item-content">
-                        <div className="movie-item-title">
-                            Mandalorian
-                        </div>
-                        <div className="item-action top-down delay-6">
-                                <Link to="/movie/mandalorian" className="btn btn-hover">
-                                    <i className="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
-                                </Link>
-                            </div>
-                        <div className="movie-infos">
-                            <div className="movie-info">
-                                <i className="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div className="movie-info">
-                                <i className="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                
-                <div className="movie-item">
-                    <img src="./images/series/supergirl.jpg" alt="Supergirl" />
-                    <div className="movie-item-content">
-                        <div className="movie-item-title">
-                            Supergirl
-                        </div>
-                        <div className="item-action top-down delay-6">
-                                <Link to="/movie/supergirl" className="btn btn-hover">
-                                    <i className="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
-                                </Link>
-                            </div>
-                        <div className="movie-infos">
-                            <div className="movie-info">
-                                <i className="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div className="movie-info">
-                                <i className="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="movie-item">
-                    <img src="./images/series/wanda.png" alt="Wanda Vision" />
-                    <div className="movie-item-content">
-                        <div className="movie-item-title">
-                            Wanda Vision
-                        </div>
-                        <div className="item-action top-down delay-6">
-                                <Link to="/movie/wanda-vision" className="btn btn-hover">
-                                    <i className="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
-                                </Link>
-                            </div>
-                        <div className="movie-infos">
-                            <div className="movie-info">
-                                <i className="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div className="movie-info">
-                                <i className="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="movie-item">
-                    <img src="./images/series/star-trek.jpg" alt="Star Trek" />
-                    <div className="movie-item-content">
-                        <div className="movie-item-title">
-                            Star Trek
-                        </div>
-                        <div className="item-action top-down delay-6">
-                                <Link to="/movie/star-trek" className="btn btn-hover">
-                                    <i className="bx bxs-right-arrow"></i>
-                                    <span>Watch now</span>
-                                </Link>
-                            </div>
-                        <div className="movie-infos">
-                            <div className="movie-info">
-                                <i className="bx bxs-star"></i>
-                                <span>9.5</span>
-                            </div>
-                            <div className="movie-info">
-                                <i className="bx bxs-time"></i>
-                                <span>120 mins</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>HD</span>
-                            </div>
-                            <div className="movie-info">
-                                <span>16+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-   <div className="section">
-           <div className="container">
-               <div className="section-header">
-                   Top series
-               </div>
-               <div className="movies-slide carousel-nav-center owl-carousel">
-                   
-                
-                   
-                   
-                   <div className="movie-item">
-                       <img src="./images/series/penthouses.jpg" alt="Penthouses" />
-                       <div className="movie-item-content">
-                           <div className="movie-item-title">
-                               Penthouses
-                           </div>
-                           <div className="item-action top-down delay-6">
-                                   <Link to="/movie/penthouses" className="btn btn-hover">
-                                       <i className="bx bxs-right-arrow"></i>
-                                       <span>Watch now</span>
-                                   </Link>
-                               </div>
-                           <div className="movie-infos">
-                               <div className="movie-info">
-                                   <i className="bx bxs-star"></i>
-                                   <span>9.5</span>
-                               </div>
-                               <div className="movie-info">
-                                   <i className="bx bxs-time"></i>
-                                   <span>120 mins</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>HD</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>16+</span>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
-                   
-                   <div className="movie-item">
-                       <img src="./images/series/mandalorian.jpg" alt="Mandalorian" />
-                       <div className="movie-item-content">
-                           <div className="movie-item-title">
-                               Mandalorian
-                           </div>
-                           <div className="item-action top-down delay-6">
-                                   <Link to="/movie/mandalorian" className="btn btn-hover">
-                                       <i className="bx bxs-right-arrow"></i>
-                                       <span>Watch now</span>
-                                   </Link>
-                               </div>
-                           <div className="movie-infos">
-                               <div className="movie-info">
-                                   <i className="bx bxs-star"></i>
-                                   <span>9.5</span>
-                               </div>
-                               <div className="movie-info">
-                                   <i className="bx bxs-time"></i>
-                                   <span>120 mins</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>HD</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>16+</span>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
-                   
-                   <div className="movie-item">
-                       <img src="./images/series/the-falcon.webp" alt="The Falcon And The Winter Soldier" />
-                       <div className="movie-item-content">
-                           <div className="movie-item-title">
-                               The Falcon And The Winter Soldier
-                           </div>
-                           <div className="item-action top-down delay-6">
-                                   <Link to="/movie/the-falcon-and-the-winter-soldier" className="btn btn-hover">
-                                       <i className="bx bxs-right-arrow"></i>
-                                       <span>Watch now</span>
-                                   </Link>
-                               </div>
-                           <div className="movie-infos">
-                               <div className="movie-info">
-                                   <i className="bx bxs-star"></i>
-                                   <span>9.5</span>
-                               </div>
-                               <div className="movie-info">
-                                   <i className="bx bxs-time"></i>
-                                   <span>120 mins</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>HD</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>16+</span>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
-                   
-                   <div className="movie-item">
-                       <img src="./images/series/wanda.png" alt="Wanda Vision" />
-                       <div className="movie-item-content">
-                           <div className="movie-item-title">
-                               Wanda Vision
-                           </div>
-                           <div className="item-action top-down delay-6">
-                                   <Link to="/movie/wanda-vision" className="btn btn-hover">
-                                       <i className="bx bxs-right-arrow"></i>
-                                       <span>Watch now</span>
-                                   </Link>
-                               </div>
-                           <div className="movie-infos">
-                               <div className="movie-info">
-                                   <i className="bx bxs-star"></i>
-                                   <span>9.5</span>
-                               </div>
-                               <div className="movie-info">
-                                   <i className="bx bxs-time"></i>
-                                   <span>120 mins</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>HD</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>16+</span>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
+  // React Hooks: useState
+  const [series, setSeries] = useState([]);
+  const [category, setCategory] = useState('popular');
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(true);
 
-                      <div className="movie-item">
-                       <img src="./images/series/supergirl.jpg" alt="Supergirl" />
-                       <div className="movie-item-content">
-                           <div className="movie-item-title">
-                               Supergirl
-                           </div>
-                           <div className="item-action top-down delay-6">
-                                   <Link to="/movie/supergirl" className="btn btn-hover">
-                                       <i className="bx bxs-right-arrow"></i>
-                                       <span>Watch now</span>
-                                   </Link>
-                               </div>
-                           <div className="movie-infos">
-                               <div className="movie-info">
-                                   <i className="bx bxs-star"></i>
-                                   <span>9.5</span>
-                               </div>
-                               <div className="movie-info">
-                                   <i className="bx bxs-time"></i>
-                                   <span>120 mins</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>HD</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>16+</span>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
-                   
-                   <div className="movie-item">
-                       <img src="./images/series/stranger-thing.jpg" alt="Stranger Things" />
-                       <div className="movie-item-content">
-                           <div className="movie-item-title">
-                               Stranger Things
-                           </div>
-                           <div className="item-action top-down delay-6">
-                                   <Link to="/movie/stranger-things" className="btn btn-hover">
-                                       <i className="bx bxs-right-arrow"></i>
-                                       <span>Watch now</span>
-                                   </Link>
-                               </div>
-                           <div className="movie-infos">
-                               <div className="movie-info">
-                                   <i className="bx bxs-star"></i>
-                                   <span>9.5</span>
-                               </div>
-                               <div className="movie-info">
-                                   <i className="bx bxs-time"></i>
-                                   <span>120 mins</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>HD</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>16+</span>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
-                   
-                   <div className="movie-item">
-                       <img src="./images/series/star-trek.jpg" alt="Star Trek" />
-                       <div className="movie-item-content">
-                           <div className="movie-item-title">
-                               Star Trek
-                           </div>
-                           <div className="item-action top-down delay-6">
-                                   <Link to="/movie/star-trek" className="btn btn-hover">
-                                       <i className="bx bxs-right-arrow"></i>
-                                       <span>Watch now</span>
-                                   </Link>
-                               </div>
-                           <div className="movie-infos">
-                               <div className="movie-info">
-                                   <i className="bx bxs-star"></i>
-                                   <span>9.5</span>
-                               </div>
-                               <div className="movie-info">
-                                   <i className="bx bxs-time"></i>
-                                   <span>120 mins</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>HD</span>
-                               </div>
-                               <div className="movie-info">
-                                   <span>16+</span>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
-    <Latestseries />
-    </>
-  )
+  // React Hooks: useEffect
+  useEffect(() => {
+    let isMounted = true;
+    setLoading(true);
+
+    const fetchSeries = async () => {
+      let data;
+      if (category === 'top_rated') {
+        data = await tmdbApi.getTopRatedSeries(page);
+      } else {
+        data = await tmdbApi.getPopularSeries(page);
+      }
+
+      if (isMounted) {
+        if (data && data.results) {
+          setSeries(data.results);
+        }
+        setLoading(false);
+      }
+    };
+
+    fetchSeries();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [category, page]);
+
+  return (
+    <div className="section" style={{ minHeight: '80vh', paddingTop: '30px' }}>
+      <div className="container">
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          marginBottom: '30px',
+          gap: '15px'
+        }}>
+          <div className="section-header" style={{ margin: 0 }}>
+            TV Series Catalog
+          </div>
+
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <button
+              onClick={() => { setCategory('popular'); setPage(1); }}
+              className={`btn ${category === 'popular' ? 'primary' : 'outline'}`}
+            >
+              Popular Series
+            </button>
+            <button
+              onClick={() => { setCategory('top_rated'); setPage(1); }}
+              className={`btn ${category === 'top_rated' ? 'primary' : 'outline'}`}
+            >
+              Top Rated Series
+            </button>
+          </div>
+        </div>
+
+        {loading ? (
+          <div style={{ textAlign: 'center', color: '#fff', padding: '60px 0' }}>
+            <h3>Loading TMDB Series...</h3>
+          </div>
+        ) : (
+          <>
+            <div className="movies-grid">
+              {series.map((show) => (
+                <MovieCard key={show.id} item={show} mediaType="tv" />
+              ))}
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop: '40px' }}>
+              <button
+                disabled={page <= 1}
+                onClick={() => setPage(p => Math.max(1, p - 1))}
+                className="btn outline"
+                style={{ opacity: page <= 1 ? 0.5 : 1, cursor: page <= 1 ? 'not-allowed' : 'pointer' }}
+              >
+                ← Previous Page
+              </button>
+              <span style={{ display: 'flex', alignItems: 'center', color: '#fff', fontWeight: 'bold' }}>
+                Page {page}
+              </span>
+              <button
+                onClick={() => setPage(p => p + 1)}
+                className="btn primary"
+              >
+                Next Page →
+              </button>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
 }
 
-export default Series
+export default Series;
