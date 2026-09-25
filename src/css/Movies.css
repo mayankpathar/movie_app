@@ -1,0 +1,74 @@
+/* Styles for Movies Page Component */
+.movies-page-container {
+  padding: 30px;
+  min-height: 80vh;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.movies-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.movies-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.movies-filter-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #aa3bff;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #aa3bff;
+  color: #ffffff;
+}
+
+.movies-grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.movie-card-item {
+  background: #1f2028;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-card-item:hover {
+  transform: translateY(-5px);
+}
+
+.movie-card-poster {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.movie-card-title {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+}

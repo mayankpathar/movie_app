@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { tmdbApi } from './services/tmdb';
 import MovieCard from './components/MovieCard';
+import './css/Movies.css';
 
 function Movies() {
   // React Hooks: useState
@@ -14,25 +15,25 @@ function Movies() {
     let isMounted = true;
     setLoading(true);
 
-    const fetchMovies = async () => {
-      let data;
-      if (category === 'top_rated') {
-        data = await tmdbApi.getTopRatedMovies(page);
-      } else if (category === 'upcoming') {
-        data = await tmdbApi.getUpcomingMovies(page);
-      } else {
-        data = await tmdbApi.getPopularMovies(page);
-      }
-
-      if (isMounted) {
-        if (data && data.results) {
-          setMovies(data.results);
-        }
-        setLoading(false);
-      }
+    const getApiPromise = () => {
+      if (category === 'top_rated') return tmdbApi.getTopRatedMovies(page);
+      if (category === 'upcoming') return tmdbApi.getUpcomingMovies(page);
+      return tmdbApi.getPopularMovies(page);
     };
 
-    fetchMovies();
+    getApiPromise()
+      .then((data) => {
+        if (isMounted) {
+          if (data && data.results) {
+            setMovies(data.results);
+          }
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        console.error('Error loading movies:', err);
+        if (isMounted) setLoading(false);
+      });
 
     return () => {
       isMounted = false;

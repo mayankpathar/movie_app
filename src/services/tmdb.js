@@ -1,34 +1,39 @@
 const BASE_URL = 'https://api.themoviedb.org/3';
-const API_KEY = '1866d4d6f557cf8d68d1ba2cc55755d1';
-const BEARER_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxODY2ZDRkNmY1NTdjZjhkNjhkMWJhMmNjNTU3NTVkMSIsIm5iZiI6MTc4ODMxNjcwNi4xNjQsInN1YiI6IjZhOTc4YzIyMDY0ZDgwNDBiZmNjZWNmZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.77U5ygnWK84kVdlSRUDP45wQlybrW9WjGPXImEPULnQ';
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY || '1866d4d6f557cf8d68d1ba2cc55755d1';
+const BEARER_TOKEN = import.meta.env.VITE_TMDB_API_TOKEN || '';
 
 export const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p/';
 
 const headers = {
-  accept: 'application/json',
-  Authorization: `Bearer ${BEARER_TOKEN}`
+  "Authorization": `Bearer ${BEARER_TOKEN}`,
+  "Content-Type": "application/json",
+  accept: 'application/json'
 };
 
-// Generic fetcher helper
-async function fetchTMDB(endpoint, params = {}) {
-  try {
-    const url = new URL(`${BASE_URL}${endpoint}`);
-    url.searchParams.append('api_key', API_KEY);
-    Object.keys(params).forEach(key => {
-      if (params[key] !== undefined && params[key] !== null) {
-        url.searchParams.append(key, params[key]);
-      }
-    });
-
-    const response = await fetch(url.toString(), { method: 'GET', headers });
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
+// Generic fetcher helper using .then().then()
+function fetchTMDB(endpoint, params = {}) {
+  const url = new URL(`${BASE_URL}${endpoint}`);
+  url.searchParams.append('api_key', API_KEY);
+  Object.keys(params).forEach(key => {
+    if (params[key] !== undefined && params[key] !== null) {
+      url.searchParams.append(key, params[key]);
     }
-    return await response.json();
-  } catch (error) {
-    console.error(`Error fetching ${endpoint}:`, error);
-    return null;
-  }
+  });
+
+  return fetch(url.toString(), { method: 'GET', headers })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      console.error(`Error fetching ${endpoint}:`, error);
+      return null;
+    });
 }
 
 // Get Poster URL

@@ -23,33 +23,30 @@ function MovieDetail({ defaultType = 'movie' }) {
     setError(null);
     setShowTrailer(false);
 
-    const fetchDetails = async () => {
-      try {
-        const data = mediaType === 'tv' 
-          ? await tmdbApi.getTvDetails(id) 
-          : await tmdbApi.getMovieDetails(id);
-
-        if (isMounted) {
-          if (data) {
-            setDetails(data);
-            // Check watchlist status from localStorage
-            const savedList = JSON.parse(localStorage.getItem('my_watchlist') || '[]');
-            setInWatchlist(savedList.some(item => item.id === data.id));
-          } else {
-            setError('Failed to load details.');
-          }
-          setLoading(false);
-        }
-      } catch (err) {
-        if (isMounted) {
-          setError('Error loading movie details.');
-          setLoading(false);
-        }
-      }
-    };
-
     if (id) {
-      fetchDetails();
+      const apiPromise = mediaType === 'tv' 
+        ? tmdbApi.getTvDetails(id) 
+        : tmdbApi.getMovieDetails(id);
+
+      apiPromise
+        .then((data) => {
+          if (isMounted) {
+            if (data) {
+              setDetails(data);
+              const savedList = JSON.parse(localStorage.getItem('my_watchlist') || '[]');
+              setInWatchlist(savedList.some(item => item.id === data.id));
+            } else {
+              setError('Failed to load details.');
+            }
+            setLoading(false);
+          }
+        })
+        .catch((err) => {
+          if (isMounted) {
+            setError('Error loading movie details.');
+            setLoading(false);
+          }
+        });
     }
 
     // Scroll to top on ID change

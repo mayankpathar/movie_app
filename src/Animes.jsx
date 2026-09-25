@@ -14,20 +14,23 @@ function Animes() {
     let isMounted = true;
     setLoading(true);
 
-    const fetchAnime = async () => {
-      const data = type === 'tv' 
-        ? await tmdbApi.getAnimeSeries(page)
-        : await tmdbApi.getAnimeMovies(page);
+    const apiPromise = type === 'tv' 
+      ? tmdbApi.getAnimeSeries(page)
+      : tmdbApi.getAnimeMovies(page);
 
-      if (isMounted) {
-        if (data && data.results) {
-          setAnimes(data.results);
+    apiPromise
+      .then((data) => {
+        if (isMounted) {
+          if (data && data.results) {
+            setAnimes(data.results);
+          }
+          setLoading(false);
         }
-        setLoading(false);
-      }
-    };
-
-    fetchAnime();
+      })
+      .catch((err) => {
+        console.error('Error fetching anime:', err);
+        if (isMounted) setLoading(false);
+      });
 
     return () => {
       isMounted = false;

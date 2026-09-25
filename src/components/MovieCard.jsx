@@ -17,11 +17,6 @@ function MovieCard({ item, mediaType = 'movie' }) {
     navigate(`/${type}/${item.id}`);
   };
 
-  const handleWatchNow = (e) => {
-    e.stopPropagation();
-    navigate(`/${type}/${item.id}`);
-  };
-
   return (
     <div className="movie-card-container" onClick={handleCardClick}>
       <div className="movie-poster-wrap">
@@ -40,7 +35,7 @@ function MovieCard({ item, mediaType = 'movie' }) {
           <span className="year">• {releaseYear}</span>
           <span className="quality-badge">HD</span>
         </div>
-        <button onClick={handleWatchNow} className="card-primary-btn">
+        <button onClick={handleCardClick} className="card-primary-btn">
           <i className="bx bxs-right-arrow" style={{ fontSize: '0.75rem' }}></i>
           <span>Watch Now</span>
         </button>
